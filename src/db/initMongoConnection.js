@@ -9,7 +9,7 @@ try {
     const url = env(ENV_VARS.MONGODB_URL);
     const db = env(ENV_VARS.MONGODB_DB);
 
-    const connectionLink = `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority`;
+    const connectionLink = `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority&appName=Cluster0`;
     await mongoose.connect(connectionLink);
     console.log('Mongo connection successfully established!');
 } catch (err) {
