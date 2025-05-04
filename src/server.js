@@ -24,8 +24,9 @@ app.use(cors());
 app.get('/contacts', async (req, res) => {
     const contacts = await getAllContacts();
     res.status(200).json({
-        data: contacts,
+        status: 200,
         message: 'Successfully found contacts!',
+        data: contacts,
     });
 });
 
@@ -34,12 +35,16 @@ app.get('/contacts/:contactId', async (req, res) => {
     const contact = await getContactById(id);
 
     if (!contact) {
-        return res.status(404).json({ message: 'Contact not found!' });
+    return res.status(404).json({
+        status: 404,
+        message: 'Contact not found',
+    });
     }
 
     res.status(200).json({
-        data: contact,
+        status: 200,
         message: `Successfully found contact with id ${id}!`,
+        data: contact,
     });
 });
 
