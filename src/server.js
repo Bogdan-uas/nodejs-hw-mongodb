@@ -1,5 +1,5 @@
 import express from 'express';
-import pino from 'pino-http';
+// import pino from 'pino-http';
 import cors from 'cors';
 import { ENV_VARS } from './constants/index.js';
 import { env } from './utils/env.js';
@@ -13,13 +13,13 @@ app.set('etag', false);
 app.use(express.json());
 app.use(cors());
 
-app.use(
-    pino({
-    transport: {
-        target: 'pino-pretty',
-    },
-    }),
-);
+// app.use(
+//     pino({
+//     transport: {
+//         target: 'pino-pretty',
+//     },
+//     }),
+// );
 
 app.get('/contacts', async (req, res) => {
     const contacts = await getAllContacts();
