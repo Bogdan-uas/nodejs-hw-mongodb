@@ -8,14 +8,14 @@ import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import { router } from './routers/contacts.js';
 
 export const setupServer = () => {
-    const app = express();
+const app = express();
 
-    app.set('etag', false);
+app.set('etag', false);
 
-    app.use(express.json());
-    app.use(cors());
+app.use(express.json());
+app.use(cors());
 
-    app.use(router);
+app.use(router);
 
 app.use(
     pino({
@@ -25,11 +25,11 @@ app.use(
     }),
 );
 
-    app.use(notFoundHandler);
+app.use(notFoundHandler);
 
-    app.use(errorHandler);
+app.use(errorHandler);
 
-    const PORT = env(ENV_VARS.PORT, 3000);
+const PORT = env(ENV_VARS.PORT, 3000);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
