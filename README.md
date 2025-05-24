@@ -1,7 +1,7 @@
 # nodejs-hw-mongodb
 
 # THIS IS NOT A WEBSITE, THAT'S A SERVICE!
-(there is actually a "website", that is working on this code, but its purpose of existence is so the back-end works properly.)
+(there is actually a "website", that is working on this code, but its purpose of existence is so the code works and works properly.)
 
 A back-end app that does properly work on Postman. 
 
