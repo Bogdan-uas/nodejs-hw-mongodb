@@ -1,11 +1,13 @@
 import express from 'express';
+import cookieParser from 'cookie-parser';
 import pino from 'pino-http';
 import cors from 'cors';
 import { ENV_VARS } from './constants/index.js';
 import { env } from './utils/env.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
-import { router } from './routers/contacts.js';
+
+import router from './routers/index.js';
 
 export const setupServer = () => {
 const app = express();
@@ -14,6 +16,7 @@ app.set('etag', false);
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 app.use(router);
 
@@ -22,11 +25,10 @@ app.use(
     transport: {
         target: 'pino-pretty',
     },
-    }),
+}),
 );
 
 app.use(notFoundHandler);
-
 app.use(errorHandler);
 
 const PORT = env(ENV_VARS.PORT, 3000);

@@ -102,7 +102,8 @@ if (!mongoose.Types.ObjectId.isValid(contactId)) {
     res.status(404).json({
         message: 'Not found',
     });
-    return;}
+    return;
+}
 
 
 if (!contact) {
