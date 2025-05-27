@@ -89,7 +89,7 @@ Afterwards, you just need to press the button "SEND":
 
 ![Image](https://github.com/user-attachments/assets/35c28eab-7251-4899-aead-f2dee93b5e9e)
 
-No additional info, nothing, just a "204 No Content", which means that you have successfully deleted it. You won't see anywhere:
+No additional info, nothing, just a "204 No Content", which means that you have successfully deleted it. You won't see it anywhere :
 
 ![Image](https://github.com/user-attachments/assets/55064cdc-2254-4d92-8121-b2eceddb35b7)
 ![Image](https://github.com/user-attachments/assets/b12acf9a-a57d-45d5-b176-d685a272bb26)
