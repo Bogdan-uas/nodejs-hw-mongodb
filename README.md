@@ -95,4 +95,6 @@ No additional info, nothing, just a "204 No Content", which means that you have 
 ![Image](https://github.com/user-attachments/assets/b12acf9a-a57d-45d5-b176-d685a272bb26)
 ![Image](https://github.com/user-attachments/assets/1cfa114d-ee6d-4c9e-8d7e-9dfd0eb5a899)
 
+#
+
 But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
