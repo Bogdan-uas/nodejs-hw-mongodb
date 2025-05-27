@@ -55,4 +55,8 @@ And there you have it, your new contact:
 
 ![Image](https://github.com/user-attachments/assets/ac0b92d3-7bb6-49ea-86cc-f5787243cf7a)
 
+(You can now also see this new contact in whole contact library):
+
+![Image](https://github.com/user-attachments/assets/ca7921a2-8ab3-4c94-bc8f-f4f28d781581)
+
 delete them: or change some info about a specific contact. But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
