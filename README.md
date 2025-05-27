@@ -28,7 +28,7 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 There are some params that you can use:
 
     - perPage: how many contacts should be shown on one page
-    - page: what page should now opened
+    - page: what page should now be opened
     - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
     - sortOrder: two options = {
         desc: descending,
@@ -36,7 +36,7 @@ There are some params that you can use:
     }
     - ("contactType", "isFavourite"): could be any key, will be sorted by the value, what you have written there
 
-    To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
+To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
 ![Image](https://github.com/user-attachments/assets/88482671-90a8-4f9b-acea-5cf161008434)
 
