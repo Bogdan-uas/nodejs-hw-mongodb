@@ -97,4 +97,8 @@ No additional info, nothing, just a "204 No Content", which means that you have 
 
 #
 
-But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
+It's obvious, that when you have a service where you can store your personal data, you must have some account where your data is safe. So, if we want to store our contacts, we need authentication for every user.
+
+# Account System
+
+<b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
