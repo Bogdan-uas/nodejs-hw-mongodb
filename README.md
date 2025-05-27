@@ -6,9 +6,19 @@ A back-end app that does properly work on Postman.
 
 A service provides some "contacts"(all stored in JSON-format), which you can interact with.
 
-You can ----->
+You can: 👇👇👇
+
+# P. S. Pro-tip
+
+For the best "experience" create such a structure:
+
+![Image](https://github.com/user-attachments/assets/4d5a82b2-12d6-4e82-8032-696232e0c775)
+
+Where "Contacts App" is a collection, in which there are two folders, which contain requests.
 
 # 1. Get all of them at once (GET):
+
+<i>getAllContacts</i>
 
 ![Image](https://github.com/user-attachments/assets/7ca2f489-8f69-4e61-87b7-2a6f6c206653)
 ![Image](https://github.com/user-attachments/assets/7f6de39e-0c96-4830-8e6f-02d2ab282a91)
@@ -16,6 +26,8 @@ You can ----->
 ("{{domain}}" is the "website's" link)
 
 # 2. Get a single one by its id (GET):
+
+<i>getContactById</i>
 
 ![Image](https://github.com/user-attachments/assets/716759ec-b6c3-4e76-8d02-88356f45a542)
 
@@ -34,6 +46,8 @@ And then we receive the contact that we wanted to find:
 ![Image](https://github.com/user-attachments/assets/b150be22-cec1-4ae6-85d0-5673a5d69380)
 
 # 3. Create a new one (POST):
+
+<i>createNewContacts</i>
 
 To create a new one, you need firstly to do this:
 
@@ -61,6 +75,8 @@ And there you have it, your new contact:
 
 # 4. Change some info about a specific contact (PATCH):
 
+<i>changeContacts</i>
+
 For example, after some time you added your new contact, you need to change some info about him. There you need PATCH-request. I also need to change some info about my contact, Tim Cheese:
 
 ![Image](https://github.com/user-attachments/assets/23a190f2-1887-409d-8a09-918e38461f12)
@@ -76,6 +92,8 @@ Press then button "SEND" and there you have your patched contact:
 ![Image](https://github.com/user-attachments/assets/711b844e-dce5-4853-927e-6c2453772c03)
 
 # 5. Delete them (DELETE):
+
+<i>deleteContacts</i>
 
 After some time, Tim Cheese has gone crazy and he's no longer my contact. I need to delete him from my library and forget about him. That's where i need DELETE-method:
 
@@ -97,8 +115,41 @@ No additional info, nothing, just a "204 No Content", which means that you have 
 
 #
 
+<i>
 It's obvious, that when you have a service where you can store your personal data, you must have some account where your data is safe. So, if we want to store our contacts, we need authentication for every user.
+</i>
 
 # Account System
+
+So, we need privacy to every user. Firstly, to start adding your contacts, you need to register:
+
+![Image](https://github.com/user-attachments/assets/b7d1a566-3a9b-4759-b8cc-e93f379db915)
+
+Once again, you should do the same what you did with POST-requests:
+
+![Image](https://github.com/user-attachments/assets/5a2cdf7c-6aa1-4372-9111-8ed7db8138b3)
+
+I take as an example some user by the name of Bimbaclat.
+
+After that, i press "SEND" button and:
+
+![Image](https://github.com/user-attachments/assets/bec7f66e-70a1-45a2-96c7-67c6b021ef7b)
+
+Then we need to login with our email and password(no name needed!):
+
+![Image](https://github.com/user-attachments/assets/ebab47e6-4098-45b1-a443-0e36eea5e1b2)
+
+And here we need to put some changes not only in "Body" but also in "Scripts":
+
+![Image](https://github.com/user-attachments/assets/a6b3ed48-3e45-4c77-8a64-0398651bce37)
+
+Here you need to choose Post-response on the left and write some code before logging in:
+
+```js
+const jsonData = JSON.parse(responseBody);
+pm.environment.set("access_token", jsonData.data.accessToken);
+```
+
+#
 
 <b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
