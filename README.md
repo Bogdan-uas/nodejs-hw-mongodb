@@ -39,7 +39,7 @@ To create a new one, you need firstly to do this:
 
 ![Image](https://github.com/user-attachments/assets/e63eb741-08a5-4b8c-be3a-3910e0c89777)
 
-The open "Body"...:
+Then open "Body"...:
 
 ![Image](https://github.com/user-attachments/assets/44faab5e-17de-4a32-aef0-d79b656b12a2)
 
