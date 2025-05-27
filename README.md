@@ -33,4 +33,26 @@ And then we receive the contact that we wanted to find:
 
 ![Image](https://github.com/user-attachments/assets/b150be22-cec1-4ae6-85d0-5673a5d69380)
 
-delete them: , create a new one or change some info about a specific contact. But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
+# Create a new one (POST):
+
+To create a new one, you need firstly to do this:
+
+![Image](https://github.com/user-attachments/assets/e63eb741-08a5-4b8c-be3a-3910e0c89777)
+
+The open "Body"...:
+
+![Image](https://github.com/user-attachments/assets/44faab5e-17de-4a32-aef0-d79b656b12a2)
+
+And choose checkbox "raw" and the JSON:
+
+![Image](https://github.com/user-attachments/assets/3d4bdd29-25fd-415c-a21a-1631e2c522d6)
+
+Lastly, you need to write some very hard JSON code(you can even write one param, only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
+
+![Image](https://github.com/user-attachments/assets/132e040d-c151-40fe-bd5d-00a37d790421)
+
+And there you have it, your new contact:
+
+![Image](https://github.com/user-attachments/assets/ac0b92d3-7bb6-49ea-86cc-f5787243cf7a)
+
+delete them: or change some info about a specific contact. But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
