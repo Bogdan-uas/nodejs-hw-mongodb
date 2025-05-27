@@ -11,8 +11,8 @@ A service provides some "contacts"(all stored in JSON-format), which you can int
 You can ----->
 
 Get all of them at once:
-[!alt-text](image-1.png)
-[!alt-text](image-1.1.png)
+image-1.png
+image-1.1.png
 
 ("{{domain}}" is the "website's" link)
 
