@@ -138,6 +138,7 @@ After that, i press "SEND" button and:
 Then we need to login with our email and password(no name needed!):
 
 ![Image](https://github.com/user-attachments/assets/ebab47e6-4098-45b1-a443-0e36eea5e1b2)
+![Image](https://github.com/user-attachments/assets/c118c05b-bb67-4e5b-96f1-954d7e763383)
 
 And here we need to put some changes not only in "Body" but also in "Scripts":
 
@@ -149,6 +150,49 @@ Here you need to choose Post-response on the left and write some code before log
 const jsonData = JSON.parse(responseBody);
 pm.environment.set("access_token", jsonData.data.accessToken);
 ```
+
+And after that, you need to go to your collection "Contacts App" and change some params:
+
+![Image](https://github.com/user-attachments/assets/7fd7d4a6-2098-43e2-827b-46d238037031)
+
+Go into Authorization:
+
+![Image](https://github.com/user-attachments/assets/989bf154-70a8-48a7-b0b3-c2f2c30d6dab)
+
+Choose at the "Auth Type" - Bearer Token
+And type in the field "Token":
+
+`{{access_token}}`
+
+Then go to every folder and request(to Authorization) and choose at the "Auth Type":
+
+![Image](https://github.com/user-attachments/assets/d8465fa6-29f8-4a08-9c85-63bce08e47ef)
+
+Then go back to POST-request "login" and finally press the button "SEND". After that, you'll see this:
+
+![Image](https://github.com/user-attachments/assets/8bbf80ed-e89f-48b1-a4d5-3f02c72e6066)
+
+This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
+
+After you finish all your work, you need the to logout:
+
+![Image](https://github.com/user-attachments/assets/d5105e39-5de0-442f-ae78-cacd826db763)
+
+You don't need to write something, just press the button "SEND" and you're good to go:
+
+![Image](https://github.com/user-attachments/assets/5f5fb24e-6658-4b9b-b886-61080cc7923c)
+
+But if your session is going more than 15 minutes and you're not finished, you need the refresh the accessToken. So we go to refresh-request:
+
+![Image](https://github.com/user-attachments/assets/676a69ae-808d-4b2f-a1f9-4fbf5054eef2)
+
+You will receive here also accessToken, so you need here also that code, that you have written into login-request:
+
+![Image](https://github.com/user-attachments/assets/80a1dd02-dab3-4c2a-853f-cef31edef592)
+
+Then you press the button "SEND" and you can work then further:
+
+![Image](https://github.com/user-attachments/assets/918d57ae-39ab-4143-a1a7-97dd5d933e11)
 
 #
 
