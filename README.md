@@ -72,6 +72,7 @@ Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then
 
 Press then button "SEND" and there you have your patched contact:
 
-![Image](https://github.com/user-attachments/assets/711b844e-dce5-4853-927e-6c2453772c03)
 ![Image](https://github.com/user-attachments/assets/175c26da-eddc-4b72-98cd-d5370e09ec81)
+![Image](https://github.com/user-attachments/assets/711b844e-dce5-4853-927e-6c2453772c03)
+
 delete them: or . But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
