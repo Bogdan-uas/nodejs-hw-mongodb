@@ -61,4 +61,17 @@ And there you have it, your new contact:
 
 # 4. Change some info about a specific contact (PATCH):
 
+For example, after some time you added your new contact, you need to change some info about him. There you need PATCH-request. I also need to change some info about my contact, Tim Cheese:
+
+![Image](https://github.com/user-attachments/assets/23a190f2-1887-409d-8a09-918e38461f12)
+
+(That id is his)
+Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then you can again put even 1 param(valid param), i put two:
+
+![Image](https://github.com/user-attachments/assets/e41cb136-7bbd-433f-b85d-352beafbb4f5)
+
+Press then button "SEND" and there you have your patched contact:
+
+![Image](https://github.com/user-attachments/assets/711b844e-dce5-4853-927e-6c2453772c03)
+![Image](https://github.com/user-attachments/assets/175c26da-eddc-4b72-98cd-d5370e09ec81)
 delete them: or . But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
