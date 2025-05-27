@@ -174,7 +174,7 @@ Then go back to POST-request "login" and finally press the button "SEND". After 
 
 This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
 
-After you finish all your work, you need the to logout:
+After you finish all your work, you need to logout:
 
 ![Image](https://github.com/user-attachments/assets/d5105e39-5de0-442f-ae78-cacd826db763)
 
