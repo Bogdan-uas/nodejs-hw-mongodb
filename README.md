@@ -19,7 +19,7 @@ You can ----->
 
 ![Image](https://github.com/user-attachments/assets/716759ec-b6c3-4e76-8d02-88356f45a542)
 
-(We need the value of red-underlined "id")
+(We need the value of red-underlined "\_id")
 
 Then we can put the id here:
 
