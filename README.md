@@ -8,14 +8,14 @@ A service provides some "contacts"(all stored in JSON-format), which you can int
 
 You can ----->
 
-# Get all of them at once:
+# 1. Get all of them at once:
 
 ![Image](https://github.com/user-attachments/assets/7ca2f489-8f69-4e61-87b7-2a6f6c206653)
 ![Image](https://github.com/user-attachments/assets/7f6de39e-0c96-4830-8e6f-02d2ab282a91)
 
 ("{{domain}}" is the "website's" link)
 
-# Get a single one by its id:
+# 2. Get a single one by its id:
 
 ![Image](https://github.com/user-attachments/assets/716759ec-b6c3-4e76-8d02-88356f45a542)
 
@@ -33,7 +33,7 @@ And then we receive the contact that we wanted to find:
 
 ![Image](https://github.com/user-attachments/assets/b150be22-cec1-4ae6-85d0-5673a5d69380)
 
-# Create a new one (POST):
+# 3. Create a new one (POST):
 
 To create a new one, you need firstly to do this:
 
@@ -59,4 +59,6 @@ And there you have it, your new contact:
 
 ![Image](https://github.com/user-attachments/assets/ca7921a2-8ab3-4c94-bc8f-f4f28d781581)
 
-delete them: or change some info about a specific contact. But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
+# 4. Change some info about a specific contact (PATCH):
+
+delete them: or . But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
