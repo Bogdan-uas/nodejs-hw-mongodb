@@ -208,3 +208,7 @@ You will receive here also accessToken, so you need here also that code, that yo
 Then you press the button "SEND" and you can work then further:
 
 ![Image](https://github.com/user-attachments/assets/918d57ae-39ab-4143-a1a7-97dd5d933e11)
+
+#
+
+<b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
