@@ -11,8 +11,8 @@ A service provides some "contacts"(all stored in JSON-format), which you can int
 You can ----->
 
 Get all of them at once:
-image-1.png
-image-1.1.png
+![Image](https://github.com/user-attachments/assets/9e113ae1-4a22-4156-9dfa-8d995907da89)
+![Image](https://github.com/user-attachments/assets/7f6de39e-0c96-4830-8e6f-02d2ab282a91)
 
 ("{{domain}}" is the "website's" link)
 
