@@ -1,4 +1,4 @@
-# <**b**>THIS IS NOT A WEBSITE, THAT'S A SERVICE!</**b**>
+# THIS IS NOT A WEBSITE, THAT'S A SERVICE!
 
 (there is actually a "website", that is working on this code, but its purpose of existence is so the code works and works properly.)
 
