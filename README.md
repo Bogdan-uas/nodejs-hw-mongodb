@@ -4,7 +4,7 @@
 
 A back-end app that does properly work on Postman.
 
-A service provides some "contacts"(all stored in JSON-format), which you can interact with.
+A service provides some ways to put all of your contacts into db(they're all stored in JSON-format).
 
 You can: 👇👇👇
 
@@ -27,14 +27,14 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 There are some params that you can use:
 
-    - perPage: how many contacts should be shown on one page
-    - page: what page should now be opened
-    - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
-    - sortOrder: two options = {
-        desc: descending,
-        asc: ascending
-    }
-    - ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
+ - perPage: how many contacts should be shown on one page
+ - page: what page should now be opened
+- sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
+- sortOrder: two options = {
+     desc: descending,
+     asc: ascending
+  }
+- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
