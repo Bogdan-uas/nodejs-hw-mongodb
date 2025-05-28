@@ -76,7 +76,7 @@ And choose checkbox "raw" and the JSON:
 
 ![Image](https://github.com/user-attachments/assets/3d4bdd29-25fd-415c-a21a-1631e2c522d6)
 
-Lastly, you need to write some very hard JSON code(you can even write one param(valid param!), only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
+Lastly, you need to write some very hard JSON code(you can even write one param(valid param!), (only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
 
 ![Image](https://github.com/user-attachments/assets/132e040d-c151-40fe-bd5d-00a37d790421)
 
