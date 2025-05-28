@@ -197,7 +197,7 @@ You don't need to write something, just press the button "SEND" and you're good 
 
 ![Image](https://github.com/user-attachments/assets/5f5fb24e-6658-4b9b-b886-61080cc7923c)
 
-But if your session is going more than 15 minutes and you're not finished, you need the refresh the accessToken. So we go to refresh-request:
+But if your session is going more than 15 minutes and you're not finished, you need to refresh the accessToken. So we go to refresh-request:
 
 ![Image](https://github.com/user-attachments/assets/676a69ae-808d-4b2f-a1f9-4fbf5054eef2)
 
