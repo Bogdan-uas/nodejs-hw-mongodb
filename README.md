@@ -31,8 +31,11 @@ There are some params that you can use:
  - page: what page should now be opened
 - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
 - sortOrder: two options = {
-     desc: descending,
-     asc: ascending
+
+    desc: descending,
+
+    asc: ascending
+  
   }
 - ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
 
