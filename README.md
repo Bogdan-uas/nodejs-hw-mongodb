@@ -34,7 +34,7 @@ There are some params that you can use:
         desc: descending,
         asc: ascending
     }
-    - ("contactType", "isFavourite"): could be any key, will be sorted by the value, what you have written there
+    - ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
