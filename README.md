@@ -4,7 +4,7 @@
 
 A back-end app that does properly work on Postman.
 
-A service provides some "contacts"(all stored in JSON-format), which you can interact with.
+A service provides some ways to put all of your contacts into db(they're all stored in JSON-format).
 
 You can: 👇👇👇
 
@@ -27,14 +27,17 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 There are some params that you can use:
 
-    - perPage: how many contacts should be shown on one page
-    - page: what page should now be opened
-    - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
-    - sortOrder: two options = {
-        desc: descending,
-        asc: ascending
-    }
-    - ("contactType", "isFavourite"): could be any key, will be sorted by the value, what you have written there
+ - perPage: how many contacts should be shown on one page
+ - page: what page should now be opened
+- sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
+- sortOrder: two options = {
+
+    desc: descending,
+
+    asc: ascending
+  
+  }
+- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
@@ -76,7 +79,7 @@ And choose checkbox "raw" and the JSON:
 
 ![Image](https://github.com/user-attachments/assets/3d4bdd29-25fd-415c-a21a-1631e2c522d6)
 
-Lastly, you need to write some very hard JSON code(you can even write one param(valid param!), only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
+Lastly, you need to write some very hard JSON code(you can even write one param(valid param!), (only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
 
 ![Image](https://github.com/user-attachments/assets/132e040d-c151-40fe-bd5d-00a37d790421)
 
@@ -197,7 +200,7 @@ You don't need to write something, just press the button "SEND" and you're good 
 
 ![Image](https://github.com/user-attachments/assets/5f5fb24e-6658-4b9b-b886-61080cc7923c)
 
-But if your session is going more than 15 minutes and you're not finished, you need the refresh the accessToken. So we go to refresh-request:
+But if your session is going more than 15 minutes and you're not finished, you need to refresh the accessToken. So we go to refresh-request:
 
 ![Image](https://github.com/user-attachments/assets/676a69ae-808d-4b2f-a1f9-4fbf5054eef2)
 
