@@ -20,8 +20,6 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 <b>After creating a file line-up, you need to scroll down the page, until you see "Account System"(or just use navigation on the top of Readme-file). This is because if you won't register and log in, you won't be able to use the service(it will be locked).</b>
 
-# (Account System)
-
 #
 
 # 1. Get all of them at once (GET):
