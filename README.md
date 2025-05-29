@@ -43,7 +43,7 @@ There are some params that you can use:
     asc: ascending
   
   }
-- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
+- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there, as for example in the example picture
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
