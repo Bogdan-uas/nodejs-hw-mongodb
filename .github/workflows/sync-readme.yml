@@ -12,32 +12,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout the repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Important for full branch access
+          ref: main
 
-      - name: Set up Git
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync README to all other branches
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Sync README to other branches
         run: |
-          git fetch --all
-          branches=$(git branch -r | grep -vE 'main|HEAD' | sed 's/origin\///')
+          for branch in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | grep -v '^origin/main$' | grep -v '^origin/HEAD$'); do
+            local_branch=$(echo $branch | sed 's|origin/||')
+            echo "🔁 Syncing README to branch: $local_branch"
 
-          for branch in $branches; do
-            echo "Processing branch: $branch"
-
-            git checkout $branch
+            git checkout -B $local_branch origin/$local_branch
             git checkout main -- README.md
 
             if ! git diff --quiet; then
-              git commit -am "Sync README from main [auto]"
-              git push origin $branch
-              echo "✅ Updated README in $branch"
+              git commit -m "Sync README from main [automated]"
+              git push origin $local_branch
+              echo "✅ README updated in $local_branch"
             else
-              echo "ℹ️ No changes to README in $branch"
+              echo "ℹ️ No README changes needed in $local_branch"
             fi
           done
+
+      - name: Switch back to main
+        run: git checkout main
