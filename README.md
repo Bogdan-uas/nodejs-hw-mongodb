@@ -124,7 +124,7 @@ After some time, Tim Cheese has gone crazy and he's no longer my contact. I need
 
 ![Image](https://github.com/user-attachments/assets/5d6bb8bf-9bd3-46f5-9d3b-d7a661e271b0)
 
-So then, firstly i need to put Tim Cheese's contact id into the request:
+So then, firstly I need to put Tim Cheese's contact id into the request:
 
 ![Image](https://github.com/user-attachments/assets/9db68f38-6872-4535-9837-ad445bbb5653)
 
