@@ -234,11 +234,8 @@ Then you press the button "SEND" and you can work then further:
 
 #
 
-<b>
-But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
-</b>
+<b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
 
-
-<p style="color: red">Also this isn't a final version of the service!</p>
+<b style="color: red">Also this isn't a final version of the service!</b>
 
 The server is being rendered on the branch "hw5-validation"
