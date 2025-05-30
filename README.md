@@ -4,7 +4,7 @@
 
 A back-end app that does properly work on Postman.
 
-A service provides some ways to put all of your contacts into db(they're all stored in JSON-format).
+A service provides some ways to put all of your contacts into data base(they're all stored in JSON-format).
 
 You can: 👇👇👇
 
@@ -18,7 +18,7 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 # Also important!
 
-<b>After creating a file line-up, you need to scroll down the page, until you see "Account System"(or just use navigation on the top of Readme-file). This is because if you won't register and log in, you won't be able to use the service(it will be locked).</b>
+<b>After creating a file line-up, you need to scroll down the page, until you see "Account System"(or just use navigation on the top of ReadMe-file). This is because if you won't register and log in, you won't be able to use the service(it will be locked).</b>
 
 #
 
@@ -33,17 +33,18 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 There are some params that you can use:
 
- - perPage: how many contacts should be shown on one page
- - page: what page should now be opened
+- perPage: how many contacts should be shown on one page
+- page: what page should now be opened
 - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
 - sortOrder: two options = {
 
-    desc: descending,
+  desc: descending,
 
-    asc: ascending
-  
+  asc: ascending
+
   }
-- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there
+
+- ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there, as for example in the example picture
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
 
@@ -106,7 +107,7 @@ For example, after some time you added your new contact, you need to change some
 ![Image](https://github.com/user-attachments/assets/23a190f2-1887-409d-8a09-918e38461f12)
 
 (That id is his)
-Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then you can again put even 1 param(valid param!), i put two:
+Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then you can again put even 1 param(valid param!), I put two:
 
 ![Image](https://github.com/user-attachments/assets/e41cb136-7bbd-433f-b85d-352beafbb4f5)
 
@@ -123,7 +124,7 @@ After some time, Tim Cheese has gone crazy and he's no longer my contact. I need
 
 ![Image](https://github.com/user-attachments/assets/5d6bb8bf-9bd3-46f5-9d3b-d7a661e271b0)
 
-So then, firstly i need to put Tim Cheese's contact id into the request:
+So then, firstly I need to put Tim Cheese's contact id into the request:
 
 ![Image](https://github.com/user-attachments/assets/9db68f38-6872-4535-9837-ad445bbb5653)
 
@@ -145,11 +146,13 @@ It's obvious, that when you have a service where you can store your personal dat
 
 # Account System
 
+<i>register</i>
+
 So, we need privacy to every user. Firstly, to start adding your contacts, you need to register:
 
 ![Image](https://github.com/user-attachments/assets/b7d1a566-3a9b-4759-b8cc-e93f379db915)
 
-Once again, you should do the same what you did with POST-requests:
+Once again, you should do the same, what you did with POST-requests:
 
 ![Image](https://github.com/user-attachments/assets/5a2cdf7c-6aa1-4372-9111-8ed7db8138b3)
 
@@ -158,6 +161,10 @@ I take as an example some user by the name of Bimbaclat.
 After that, i press "SEND" button and:
 
 ![Image](https://github.com/user-attachments/assets/bec7f66e-70a1-45a2-96c7-67c6b021ef7b)
+
+#
+
+<i>login</i>
 
 Then we need to login with our email and password(no name needed!):
 
@@ -198,7 +205,11 @@ Then go back to POST-request "login" and finally press the button "SEND". After 
 
 This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
 
-After you finish all your work, you need to logout:
+#
+
+<i>logout</i>
+
+After you finish all your work, you need to log out:
 
 ![Image](https://github.com/user-attachments/assets/d5105e39-5de0-442f-ae78-cacd826db763)
 
@@ -206,11 +217,15 @@ You don't need to write something, just press the button "SEND" and you're good 
 
 ![Image](https://github.com/user-attachments/assets/5f5fb24e-6658-4b9b-b886-61080cc7923c)
 
+#
+
+<i>refresh</i>
+
 But if your session is going more than 15 minutes and you're not finished, you need to refresh the accessToken. So we go to refresh-request:
 
 ![Image](https://github.com/user-attachments/assets/676a69ae-808d-4b2f-a1f9-4fbf5054eef2)
 
-You will receive here also accessToken, so you need here also that code, that you have written into login-request:
+You will receive here also accessToken, so you need here that code, that you have written into login-request:
 
 ![Image](https://github.com/user-attachments/assets/80a1dd02-dab3-4c2a-853f-cef31edef592)
 
@@ -221,3 +236,7 @@ Then you press the button "SEND" and you can work then further:
 #
 
 <b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
+
+<b>Also this isn't a final version of the service!</b>
+
+The server is being rendered on the branch "hw5-auth".
