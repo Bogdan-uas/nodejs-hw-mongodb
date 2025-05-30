@@ -209,7 +209,7 @@ This "accessToken" is our guarantee to access to our contacts(his life is only 1
 
 <i>logout</i>
 
-After you finish all your work, you need to logout:
+After you finish all your work, you need to log out:
 
 ![Image](https://github.com/user-attachments/assets/d5105e39-5de0-442f-ae78-cacd826db763)
 
