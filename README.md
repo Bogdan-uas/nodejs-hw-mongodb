@@ -33,16 +33,17 @@ Where "Contacts App" is a collection, in which there are two folders, which cont
 
 There are some params that you can use:
 
- - perPage: how many contacts should be shown on one page
- - page: what page should now be opened
+- perPage: how many contacts should be shown on one page
+- page: what page should now be opened
 - sortBy: by what should the contacts be sorted(a key should be entered, not value of something!!!)
 - sortOrder: two options = {
 
-    desc: descending,
+  desc: descending,
 
-    asc: ascending
-  
+  asc: ascending
+
   }
+
 - ("contactType", "isFavourite", etc. ): could be any key, will be sorted by the value, what you have written there, as for example in the example picture
 
 To be the most comfortable, write into Params, as "Key"-what option and "Value"-how much:
@@ -236,6 +237,6 @@ Then you press the button "SEND" and you can work then further:
 
 <b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
 
-<b style="color: red">Also this isn't a final version of the service!</b>
+<b>Also this isn't a final version of the service!</b>
 
 The server is being rendered on the branch "hw5-auth"

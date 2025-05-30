@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'README.md'
+      - "README.md"
 
 jobs:
   sync-readme:
@@ -25,10 +25,19 @@ jobs:
       - name: Sync README to all other branches
         run: |
           git fetch --all
-          for branch in $(git branch -r | grep -vE 'main|HEAD' | sed 's/origin\///'); do
-            echo "Syncing README to $branch..."
+          branches=$(git branch -r | grep -vE 'main|HEAD' | sed 's/origin\///')
+
+          for branch in $branches; do
+            echo "Processing branch: $branch"
+
             git checkout $branch
             git checkout main -- README.md
-            git commit -am "Sync README from main [auto]" || echo "No changes to commit in $branch"
-            git push origin $branch || echo "Nothing to push on $branch"
+
+            if ! git diff --quiet; then
+              git commit -am "Sync README from main [auto]"
+              git push origin $branch
+              echo "✅ Updated README in $branch"
+            else
+              echo "ℹ️ No changes to README in $branch"
+            fi
           done
