@@ -28,11 +28,11 @@ jobs:
 
       - name: Sync README.md to other branches
         run: |
-          for remote_branch in $(git for-each-ref --format='%(refname:short)' refs/remotes/ | grep -vE 'origin/(main|HEAD)$'); do
+          for remote_branch in $(git branch -r | grep -vE 'origin/(main|HEAD)$'); do
             branch_name=${remote_branch#origin/}
             echo "🔁 Syncing README to branch: $branch_name"
 
-            git checkout -B "$branch_name" "origin/$branch_name"
+            git checkout -B "$branch_name" "$remote_branch"
             git checkout main -- README.md
 
             if ! git diff --quiet; then
