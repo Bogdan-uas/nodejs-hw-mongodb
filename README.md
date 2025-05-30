@@ -107,7 +107,7 @@ For example, after some time you added your new contact, you need to change some
 ![Image](https://github.com/user-attachments/assets/23a190f2-1887-409d-8a09-918e38461f12)
 
 (That id is his)
-Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then you can again put even 1 param(valid param!), i put two:
+Then we need to open "Body", then check the checkbox "raw" and pick "JSON". Then you can again put even 1 param(valid param!), I put two:
 
 ![Image](https://github.com/user-attachments/assets/e41cb136-7bbd-433f-b85d-352beafbb4f5)
 
