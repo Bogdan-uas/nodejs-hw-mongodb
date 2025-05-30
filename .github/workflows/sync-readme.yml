@@ -12,21 +12,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout main branch using Personal Access Token
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
+          token: ${{ secrets.GH_PAT }}
 
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Fetch all branches
+      - name: Fetch all remote branches
         run: git fetch --all --prune
 
-      - name: Sync README.md to other branches
+      - name: Sync README.md to all branches
         run: |
           for remote_branch in $(git branch -r | grep -vE 'origin/(main|HEAD)$'); do
             branch_name=${remote_branch#origin/}
