@@ -152,7 +152,7 @@ So, we need privacy to every user. Firstly, to start adding your contacts, you n
 
 ![Image](https://github.com/user-attachments/assets/b7d1a566-3a9b-4759-b8cc-e93f379db915)
 
-Once again, you should do the same what you did with POST-requests:
+Once again, you should do the same, what you did with POST-requests:
 
 ![Image](https://github.com/user-attachments/assets/5a2cdf7c-6aa1-4372-9111-8ed7db8138b3)
 
