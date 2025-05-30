@@ -28,7 +28,7 @@ jobs:
 
       - name: Sync README to other branches
         run: |
-          for branch in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | grep -v '^origin/main$' | grep -v '^origin/HEAD$'); do
+          for branch in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin | grep -vE '^origin/(main|HEAD)$'); do
             local_branch=$(echo $branch | sed 's|origin/||')
             echo "🔁 Syncing README to branch: $local_branch"
 
@@ -43,6 +43,7 @@ jobs:
               echo "ℹ️ No README changes needed in $local_branch"
             fi
           done
+
 
       - name: Switch back to main
         run: git checkout main
