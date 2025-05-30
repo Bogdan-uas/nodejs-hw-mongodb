@@ -238,4 +238,4 @@ Then you press the button "SEND" and you can work then further:
 
 <b style="color: red">Also this isn't a final version of the service!</b>
 
-The server is being rendered on the branch "hw5-validation"
+The server is being rendered on the branch "hw5-auth"
