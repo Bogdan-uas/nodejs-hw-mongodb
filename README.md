@@ -145,6 +145,8 @@ It's obvious, that when you have a service where you can store your personal dat
 
 # Account System
 
+<i>register</i>
+
 So, we need privacy to every user. Firstly, to start adding your contacts, you need to register:
 
 ![Image](https://github.com/user-attachments/assets/b7d1a566-3a9b-4759-b8cc-e93f379db915)
@@ -158,6 +160,10 @@ I take as an example some user by the name of Bimbaclat.
 After that, i press "SEND" button and:
 
 ![Image](https://github.com/user-attachments/assets/bec7f66e-70a1-45a2-96c7-67c6b021ef7b)
+
+#
+
+<i>login</i>
 
 Then we need to login with our email and password(no name needed!):
 
@@ -198,6 +204,10 @@ Then go back to POST-request "login" and finally press the button "SEND". After 
 
 This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
 
+#
+
+<i>logout</i>
+
 After you finish all your work, you need to logout:
 
 ![Image](https://github.com/user-attachments/assets/d5105e39-5de0-442f-ae78-cacd826db763)
@@ -205,6 +215,10 @@ After you finish all your work, you need to logout:
 You don't need to write something, just press the button "SEND" and you're good to go:
 
 ![Image](https://github.com/user-attachments/assets/5f5fb24e-6658-4b9b-b886-61080cc7923c)
+
+#
+
+<i>refresh</i>
 
 But if your session is going more than 15 minutes and you're not finished, you need to refresh the accessToken. So we go to refresh-request:
 
@@ -220,4 +234,10 @@ Then you press the button "SEND" and you can work then further:
 
 #
 
-<b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
+<b>
+But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.
+</b>
+
+<p style="color: red">Also this isn't a final version of the service!</p>
+
+The server is being rendered on the branch "hw5-validation"
