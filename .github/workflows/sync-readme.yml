@@ -29,14 +29,14 @@ jobs:
       - name: Sync README.md to other branches
         run: |
           for remote_branch in $(git branch -r | grep -vE 'origin/(main|HEAD)$'); do
-          branch_name=${remote_branch#origin/}
-          echo "🔁 Syncing README to branch: $branch_name"
+            branch_name=${remote_branch#origin/}
+            echo "🔁 Syncing README to branch: $branch_name"
 
-          git checkout -B "$branch_name" "$remote_branch"
-          git checkout main -- README.md
+            git checkout -B "$branch_name" "$remote_branch"
+            git checkout main -- README.md
 
-          git add README.md
-          git commit -m "Sync README from main [automated]" || echo "ℹ️ Nothing to commit in $branch_name"
-          git push origin "$branch_name"
-          echo "✅ README synced to $branch_name"
+            git add README.md
+            git commit -m "Sync README from main [automated]" || echo "ℹ️ Nothing to commit in $branch_name"
+            git push origin "$branch_name"
+            echo "✅ README synced to $branch_name"
           done
