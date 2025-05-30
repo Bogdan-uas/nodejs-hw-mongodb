@@ -4,7 +4,7 @@
 
 A back-end app that does properly work on Postman.
 
-A service provides some ways to put all of your contacts into db(they're all stored in JSON-format).
+A service provides some ways to put all of your contacts into data base(they're all stored in JSON-format).
 
 You can: 👇👇👇
 
