@@ -225,7 +225,7 @@ But if your session is going more than 15 minutes and you're not finished, you n
 
 ![Image](https://github.com/user-attachments/assets/676a69ae-808d-4b2f-a1f9-4fbf5054eef2)
 
-You will receive here also accessToken, so you need here also that code, that you have written into login-request:
+You will receive here also accessToken, so you need here that code, that you have written into login-request:
 
 ![Image](https://github.com/user-attachments/assets/80a1dd02-dab3-4c2a-853f-cef31edef592)
 
