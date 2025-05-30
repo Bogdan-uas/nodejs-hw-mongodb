@@ -35,11 +35,11 @@ jobs:
             git checkout -B "$branch_name" "$remote_branch"
             git checkout main -- README.md
 
-            if ! git diff --quiet; then
-              git commit -m "Sync README from main [automated]"
-              git push origin "$branch_name"
-              echo "✅ README updated in $branch_name"
+            if git ls-files --modified README.md | grep -q 'README.md'; then
+            git commit -m "Sync README from main [automated]"
+            git push origin "$branch_name"
+            echo "✅ README updated in $branch_name"
             else
-              echo "ℹ️ No changes needed in $branch_name"
+            echo "ℹ️ No changes needed in $branch_name"
             fi
-          done
+            done
