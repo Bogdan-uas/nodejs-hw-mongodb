@@ -120,7 +120,7 @@ Press then button "SEND" and there you have your patched contact:
 
 <i>deleteContacts</i>
 
-After some time, Tim Cheese has gone crazy and he's no longer my contact. I need to delete him from my library and forget about him. That's where i need DELETE-method:
+After some time, Tim Cheese has gone crazy and he's no longer my contact. I need to delete him from my library and forget about him. That's where I need DELETE-method:
 
 ![Image](https://github.com/user-attachments/assets/5d6bb8bf-9bd3-46f5-9d3b-d7a661e271b0)
 
