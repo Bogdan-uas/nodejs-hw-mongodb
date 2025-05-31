@@ -86,7 +86,7 @@ And choose checkbox "raw" and the JSON:
 
 ![Image](https://github.com/user-attachments/assets/3d4bdd29-25fd-415c-a21a-1631e2c522d6)
 
-Lastly, you need to write some very hard JSON code(you can even write one param(valid param!), (only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
+Lastly, you need to write some very hard JSON code(you can even write one param(valid param!)), (only one is required for the request to be fulfilled)("userId" and "\_id" will be generated, you don't need to write your own ones!!!) and press the button "SEND":
 
 ![Image](https://github.com/user-attachments/assets/132e040d-c151-40fe-bd5d-00a37d790421)
 
@@ -179,7 +179,7 @@ Here you need to choose Post-response on the left and write some code before log
 
 ```js
 const jsonData = JSON.parse(responseBody);
-pm.environment.set("access_token", jsonData.data.accessToken);
+pm.environment.set('access_token', jsonData.data.accessToken);
 ```
 
 And after that, you need to go to your collection "Contacts App" and change some params:
@@ -203,7 +203,7 @@ Then go back to POST-request "login" and finally press the button "SEND". After 
 
 ![Image](https://github.com/user-attachments/assets/8bbf80ed-e89f-48b1-a4d5-3f02c72e6066)
 
-This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
+This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 30 days and you don't actually need them. But if you're interested, go into Cookies file)
 
 #
 
