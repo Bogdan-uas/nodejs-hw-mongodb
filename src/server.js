@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use(rootRouter);
 
-app.use('*', notFoundHandler);
+app.use(notFoundHandler);
 
 app.use(errorHandler);
 
