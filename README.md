@@ -122,7 +122,7 @@ And after all, it's not excluded to include some photos in both PATCH and POST-r
 
 ![Image](https://github.com/user-attachments/assets/2ba3aa9c-b684-481b-9bf6-cbb66a3c1ae8)
 
-Here you need to write in the "Key"-field: photo(this should be strictly photo, if you will write something else, you won't be able to upload a photo), choose next to it: "File", and then you should a photo which you would like to have on the contact you're patching or creating.:
+Here you need to write in the "Key"-field: photo(this should be strictly photo, if you will write something else, you won't be able to upload a photo), choose next to it: "File", and then you should choose a photo which you would like to have on the contact you're patching or creating.:
 
 ![Image](https://github.com/user-attachments/assets/c722171b-d012-43c6-a2d1-10ec2ef2b9de)
 
@@ -269,7 +269,7 @@ So, if you somehow forgot a password to your account on the service, but remembe
 
 ![Image](https://github.com/user-attachments/assets/b0767698-d4a6-4535-8d54-0d8b9fca9b88)
 
-After that, you need to go into the same path, which you almost always have gone with and write only! one param, your "email" of your registered account(if the email, which you have registered on the service with, is a fictional one(i mean, that hasn't ever existed), you won't be able to restore a password, because after submitting, a letter will be sent to an email, you've typed in). I also forgot a pwd to my service account, so I need also this:
+After that, you need to go into the same path, which you always have gone with and write only! one param, your "email" of your registered account(if the email, which you have registered on the service with, is a fictional one(i mean, that hasn't ever existed), you won't be able to restore a password, because after submitting, a letter will be sent to an email, you've typed in). I also forgot a pwd to my service account, so I need also this:
 
 ![Image](https://github.com/user-attachments/assets/4fd6e1a5-63bc-4dc8-8695-e13a85b0e680)
 
@@ -277,7 +277,7 @@ We press button "SEND" and here it is:
 
 ![Image](https://github.com/user-attachments/assets/d4362f06-a6b6-4af1-98f0-85047605d923)
 
-After that, go to your email-service(im ny case, that's Gmail) and open the latest message, you've received:
+After that, go to your email-service(in my case, that's Gmail) and open the latest message, you've received:
 
 ![Image](https://github.com/user-attachments/assets/b03aff3b-a1d1-47e4-9c55-1a114ea76dfb)
 
@@ -285,7 +285,7 @@ After that, go to your email-service(im ny case, that's Gmail) and open the late
 
 ![image](https://github.com/user-attachments/assets/34a12e35-8d24-4046-aa81-5f8557a90f9d)
 
-We need a link of the "website", specifically a param "token=" that has some random numbers. This token is a JWT(JSON Web Token). It's long and hard to explain, just lokk up in the Internet, but in short: it is a token, where is stored some info about you. We need to copy it and paste it already in <i>reset password</i>:
+We need a link of the "website", specifically a param "token=" that has some random letters and numbers. This token is a JWT(JSON Web Token). It's long and hard to explain, just look up in the Internet, but in short: it is a token, where there is stored some info about you. We need to copy it and paste it already in <i>reset password</i>:
 
 ![image](https://github.com/user-attachments/assets/87fdc61e-0d5d-4596-9edc-46c824b27d09)
 
@@ -299,7 +299,7 @@ First one, is a token you've copied and other one is a new password. After press
 
 And now this password will be your main one. 
 
-You also need to remember that JWT's life, after sending an email, is only five minutes!!!
+You also need to remember that, JWT's life, after sending an email, is only five minutes long!!!
 If the token is expired, make a new request to resend the email.
 
 #
