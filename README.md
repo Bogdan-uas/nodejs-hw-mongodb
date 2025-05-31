@@ -179,7 +179,7 @@ Here you need to choose Post-response on the left and write some code before log
 
 ```js
 const jsonData = JSON.parse(responseBody);
-pm.environment.set("access_token", jsonData.data.accessToken);
+pm.environment.set('access_token', jsonData.data.accessToken);
 ```
 
 And after that, you need to go to your collection "Contacts App" and change some params:
