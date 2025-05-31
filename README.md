@@ -12,7 +12,7 @@ You can: 👇👇👇
 
 For the best "experience" create such a structure:
 
-![Image](https://github.com/user-attachments/assets/4d5a82b2-12d6-4e82-8032-696232e0c775)
+![image](https://github.com/user-attachments/assets/53c8ae16-4514-4232-9d3d-49a4f36941bd)
 
 Where "Contacts App" is a collection, in which there are two folders, which contain requests.
 
@@ -115,6 +115,32 @@ Press then button "SEND" and there you have your patched contact:
 
 ![Image](https://github.com/user-attachments/assets/175c26da-eddc-4b72-98cd-d5370e09ec81)
 ![Image](https://github.com/user-attachments/assets/711b844e-dce5-4853-927e-6c2453772c03)
+
+#
+
+And after all, it's not excluded to include some photos in both PATCH and POST-requets. On our service, this can be done. Here you need to go again in "Body", but this time, you need to choose "form-data" instead of "raw":
+
+![Image](https://github.com/user-attachments/assets/2ba3aa9c-b684-481b-9bf6-cbb66a3c1ae8)
+
+Here you need to write in the "Key"-field: photo(this should be strictly photo, if you will write something else, you won't be able to upload a photo), choose next to it: "File", and then you should a photo which you would like to have on the contact you're patching or creating.:
+
+![Image](https://github.com/user-attachments/assets/c722171b-d012-43c6-a2d1-10ec2ef2b9de)
+
+I installed also a photo, for my friend Tim Cheese, so he has an avatar in my Contacts App:
+
+![image](https://github.com/user-attachments/assets/34d4e375-3727-496a-9656-19d99580794d)
+
+Then we press the button "SEND" and here you have it:
+
+![image](https://github.com/user-attachments/assets/94b9b1f4-3ddf-4c91-8cca-e36c38b4fd30)
+
+You can hover on that link and with pressed ctrl, you can open it in your main browser and see the photo:
+
+![image](https://github.com/user-attachments/assets/b93e1ff7-6a06-406f-865c-85dbb1ea1f45)
+
+(And yes, "form-data" can be an alternative to "raw" with "JSON", for those who don't like to write on JSON.)
+
+#
 
 # 5. Delete them (DELETE):
 
