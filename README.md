@@ -261,8 +261,49 @@ Then you press the button "SEND" and you can work then further:
 
 #
 
+<i>request reset email</i> + <i>reset password</i>
+
+Sometimes happens that after a long time, after firstly signing up into some service, you forget a password, which you have always logged in with. Then you can't log into your account and you can't use a service normally then. The same can happen at our service. But still, even if you forgot your password, there can be solution for you(depends on the service, if they have such logic). If you remember your email, you can then write it there where it is needed and receive a letter with a form, where you can return your password. In our service, that's a little bit more simple.
+
+So, if you somehow forgot a password to your account on the service, but remember an email, you've signed up with, then firstly you need to go into "<i>request reset email</i>":
+
+![Image](https://github.com/user-attachments/assets/b0767698-d4a6-4535-8d54-0d8b9fca9b88)
+
+After that, you need to go into the same path, which you almost always have gone with and write only! one param, your "email" of your registered account(if the email, which you have registered on the service with, is a fictional one(i mean, that hasn't ever existed), you won't be able to restore a password, because after submitting, a letter will be sent to an email, you've typed in). I also forgot a pwd to my service account, so I need also this:
+
+![Image](https://github.com/user-attachments/assets/4fd6e1a5-63bc-4dc8-8695-e13a85b0e680)
+
+We press button "SEND" and here it is:
+
+![Image](https://github.com/user-attachments/assets/d4362f06-a6b6-4af1-98f0-85047605d923)
+
+After that, go to your email-service(im ny case, that's Gmail) and open the latest message, you've received:
+
+![Image](https://github.com/user-attachments/assets/b03aff3b-a1d1-47e4-9c55-1a114ea76dfb)
+
+(A name can be different) So, here we need to click on the blue, underlined link "here" and you will redirected to a "website" that will look something like this:
+
+![image](https://github.com/user-attachments/assets/34a12e35-8d24-4046-aa81-5f8557a90f9d)
+
+We need a link of the "website", specifically a param "token=" that has some random numbers. This token is a JWT(JSON Web Token). It's long and hard to explain, just lokk up in the Internet, but in short: it is a token, where is stored some info about you. We need to copy it and paste it already in <i>reset password</i>:
+
+![image](https://github.com/user-attachments/assets/87fdc61e-0d5d-4596-9edc-46c824b27d09)
+
+Here we need, once again, to open "Body", then "raw" and "JSON" and write two params: 
+
+![image](https://github.com/user-attachments/assets/5dcd527f-5f46-4f75-9982-7dbe5092dad8)
+
+First one, is a token you've copied and other one is a new password. After pressing a button "SEND", you'll receive:
+
+![image](https://github.com/user-attachments/assets/a7b7a9c6-9c0d-4e2e-a785-60693f58c5ad)
+
+And now this password will be your main one. 
+
+You also need to remember that JWT's life, after sending an email, is only five minutes!!!
+If the token is expired, make a new request to resend the email.
+
+#
+
 <b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
 
-<b>Also this isn't a final version of the service!</b>
-
-The server is being rendered on the branch "hw5-auth".
+<b>Also this isn't a final version of the service!</b> The server is being rendered on the branch "hw6-email-and-images".
