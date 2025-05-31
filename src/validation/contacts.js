@@ -9,7 +9,7 @@ export const createContactSchema = Joi.object({
 }),
 
     phoneNumber: Joi.string().required(),
-    email: Joi.string().email().min(3).max(20),
+    email: Joi.string().email(),
     isFavourite: Joi.boolean(),
     contactType: Joi.string().valid('work', 'home', 'personal').required(),
     userId: Joi.string(),
@@ -19,7 +19,7 @@ export const createContactSchema = Joi.object({
 export const updateContactSchema = Joi.object({
     name: Joi.string().min(3).max(20),
     phoneNumber: Joi.string(),
-    email: Joi.string().email().min(3).max(20),
+    email: Joi.string().email(),
     isFavourite: Joi.boolean(),
     contactType: Joi.string().valid('work', 'home', 'personal'),
     photo:Joi.string(),
