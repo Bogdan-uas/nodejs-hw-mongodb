@@ -134,7 +134,7 @@ Then we press the button "SEND" and here you have it:
 
 ![image](https://github.com/user-attachments/assets/94b9b1f4-3ddf-4c91-8cca-e36c38b4fd30)
 
-You can hover on that link and with pressed ctrl, you can open it in your main browser and see the photo:
+You can hover on that link and with pressed ctrl, then you will open it in your main browser and see the photo:
 
 ![image](https://github.com/user-attachments/assets/b93e1ff7-6a06-406f-865c-85dbb1ea1f45)
 
@@ -210,7 +210,7 @@ pm.environment.set('access_token', jsonData.data.accessToken);
 
 And after that, you need to go to your collection "Contacts App" and change some params:
 
-![Image](https://github.com/user-attachments/assets/7fd7d4a6-2098-43e2-827b-46d238037031)
+![Image](https://github.com/user-attachments/assets/f2caec17-1bd7-4565-ab57-7e9a8ddc9c01)
 
 Go into Authorization:
 
@@ -225,11 +225,11 @@ Then go to every folder and request(to Authorization) and choose at the "Auth Ty
 
 ![Image](https://github.com/user-attachments/assets/d8465fa6-29f8-4a08-9c85-63bce08e47ef)
 
-Then go back to POST-request "login" and finally press the button "SEND". After that, you'll see this:
+Then go back to POST-request "<i>login</i>" and finally press the button "SEND". After that, you'll see this:
 
 ![Image](https://github.com/user-attachments/assets/8bbf80ed-e89f-48b1-a4d5-3f02c72e6066)
 
-This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 30 days and you don't actually need them. But if you're interested, go into Cookies file)
+This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written, saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 30 days and you don't actually need them. But if you're interested, go into Cookies file)
 
 #
 
@@ -255,7 +255,7 @@ You will receive here also accessToken, so you need here that code, that you hav
 
 ![Image](https://github.com/user-attachments/assets/80a1dd02-dab3-4c2a-853f-cef31edef592)
 
-Then you press the button "SEND" and you can work then further:
+Once we already configured how the accessToken will be shared amongst all other requests, press the button "SEND" and you can work then further:
 
 ![Image](https://github.com/user-attachments/assets/918d57ae-39ab-4143-a1a7-97dd5d933e11)
 
@@ -263,13 +263,13 @@ Then you press the button "SEND" and you can work then further:
 
 <i>request reset email</i> + <i>reset password</i>
 
-Sometimes happens that after a long time, after firstly signing up into some service, you forget a password, which you have always logged in with. Then you can't log into your account and you can't use a service normally then. The same can happen at our service. But still, even if you forgot your password, there can be solution for you(depends on the service, if they have such logic). If you remember your email, you can then write it there where it is needed and receive a letter with a form, where you can return your password. In our service, that's a little bit more simple.
+Sometimes happens that after a long time, after firstly signing up into some service, you forget a password, which you have always logged in with. Then you can't log into your account and you can't use a service normally then. The same can happen at our service. But still, even if you forgot your password, there can be solution for you(depends on the service, if they have such logic). If you remember your email, you can then write it there where it is needed and receive a letter with a form, where you can restore your password. In our service, that's a little bit more simple.
 
 So, if you somehow forgot a password to your account on the service, but remember an email, you've signed up with, then firstly you need to go into "<i>request reset email</i>":
 
 ![Image](https://github.com/user-attachments/assets/b0767698-d4a6-4535-8d54-0d8b9fca9b88)
 
-After that, you need to go into the same path, which you always have gone with and write only! one param, your "email" of your registered account(if the email, which you have registered on the service with, is a fictional one(i mean, that hasn't ever existed), you won't be able to restore a password, because after submitting, a letter will be sent to an email, you've typed in). I also forgot a pwd to my service account, so I need also this:
+After that, you need to go into the same path, which you always have gone with and write only! one param, your "email" of your registered account(if the email, which you have registered on the service with, is a fictional one(i mean, it hasn't ever existed), you won't be able to restore a password, because after submitting, a letter will be sent to an email, you've typed in). I also forgot a password to my service account, so I need also this:
 
 ![Image](https://github.com/user-attachments/assets/4fd6e1a5-63bc-4dc8-8695-e13a85b0e680)
 
