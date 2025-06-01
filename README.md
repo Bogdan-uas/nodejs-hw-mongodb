@@ -229,7 +229,7 @@ Then go back to POST-request "<i>login</i>" and finally press the button "SEND".
 
 ![Image](https://github.com/user-attachments/assets/8bbf80ed-e89f-48b1-a4d5-3f02c72e6066)
 
-This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written, saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 30 days and you don't actually need them. But if you're interested, go into Cookies file)
+This "accessToken" is our guarantee to access to our contacts(his life is only 15 minutes!!!). And that code what we have written, saves the value of Access Token into constant `{{access_token}}` that will be inherited by every request and then you can use the app freely.(There are also refreshToken and SessionId that are being generated with the accessToken, but they live for 1 day and you don't actually need them. But if you're interested, go into Cookies file)
 
 #
 
