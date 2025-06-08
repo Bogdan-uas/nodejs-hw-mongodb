@@ -343,7 +343,7 @@ With Google Oauth, you can actually both log in and register(it will just look f
 #
 
 <b>
-But if talking seriously, all this is just for you to try the functionality of the service. But if you want actually to use this in your purposes and see all the maximums and minimums, there is a Swagger-Documentaion: 
+But if talking seriously, all this is just for you to try out the functionality of the service. But if you want actually to use this in your purposes and see all the maximums and minimums, there is a Swagger-Documentaion: 
 
 https://nodejs-hw-mongodb-7wu3.onrender.com/api-docs/
 
