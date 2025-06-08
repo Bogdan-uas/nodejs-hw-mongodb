@@ -12,7 +12,7 @@ You can: 👇👇👇
 
 For the best "experience" create such a structure:
 
-![image](https://github.com/user-attachments/assets/53c8ae16-4514-4232-9d3d-49a4f36941bd)
+![Image](https://github.com/user-attachments/assets/00a5baf7-7cdf-456e-87c1-391327838653)
 
 Where "Contacts App" is a collection, in which there are two folders, which contain requests.
 
@@ -134,7 +134,7 @@ Then we press the button "SEND" and here you have it:
 
 ![image](https://github.com/user-attachments/assets/94b9b1f4-3ddf-4c91-8cca-e36c38b4fd30)
 
-You can hover on that link and with pressed ctrl, then you will open it in your main browser and see the photo:
+You can hover on that link and with pressed Control (if on Mac, Command), then you will open it in your main browser and see the photo:
 
 ![image](https://github.com/user-attachments/assets/b93e1ff7-6a06-406f-865c-85dbb1ea1f45)
 
@@ -304,6 +304,136 @@ If the token is expired, make a new request to resend the email.
 
 #
 
-<b>But you must know, all this can be done in Postman(not on a "website"), with the link of deployed back-end.</b>
+<i>confirm oauth</i> + <i>get oauth url</i>
 
-<b>Also this isn't a final version of the service!</b> The server is being rendered on the branch "hw6-email-and-images".
+There can be also another way, how you register or log in. This another way is via Google Oauth. And on our service this also works, that's why if you don't want to remember what account data you have, you should go this way. Firstly, go to GET-request "<i>get oauth url</i>":
+
+![Image](https://github.com/user-attachments/assets/988ddb95-ccee-46a4-b8ce-d9892b5c70bd)
+
+You don't need to write something in here, just press the button "SEND" and you'll receive an URL then:
+
+![image](https://github.com/user-attachments/assets/2af8c6ef-976a-4d12-a437-8093e4e7dd10)
+
+You need to press on that link with pressed Control (if on Mac, Command) and then you will be redirected into your main browser to "some" website. There you need again a link of that "website" and you need to copy it entirely:
+
+![Image](https://github.com/user-attachments/assets/17a3df43-9a2c-4ad7-ad6b-1e4b6ed24d4d)
+
+Then you need to go to <i>confirm oauth</i> where you need to go once again to "Body", then choose "raw" and "JSON". Then you need to write there "code": "" and paste that copied URL:
+
+![Image](https://github.com/user-attachments/assets/813ef7f2-e130-41a1-a8cb-fcc197dba2ca)
+![Image](https://github.com/user-attachments/assets/650b0642-dcc8-49f9-861a-3904e2eabbfa)
+
+Then you need to delete "<i>http://localhost:3000/confirm-google-auth?code=</i>" and then "<i>&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none</i>", so it remains only a token, that looks something like this:
+
+![Image](https://github.com/user-attachments/assets/a53f382b-d2b1-4992-9990-c6caea15b2e0)
+
+But you need also to replace these three letters with slash!:
+
+![Image](https://github.com/user-attachments/assets/6253efb3-bdf2-4e35-9f16-edba32ccd0b2)
+![Image](https://github.com/user-attachments/assets/0f33d20c-876d-4f0a-b117-0db942aaceb6)
+
+(If you didn't understand how to delete all that stuff so in the end, you have a token, i will help you now to understand it. So just to remember, look for "code=" and "&scope=" in the URL and everything that stands before "code=" and after "&scope=", needs to be deleted(including these names). And second, third and fourth letters of what has remained, need to be replaced by slash(/))
+
+Then press the button "SEND" and there you have it:
+
+![Image](https://github.com/user-attachments/assets/f965a0ac-12fa-4067-a92d-fb29bfaa3b59)
+
+With Google Oauth, you can actually both log in and register(it will just look for your account in a database: if not found, register; if found, log in). Then you can freely work with your contacts.
+
+#
+
+<b>
+But if talking seriously, all this is just for you to try the functionality of the service. But if you want actually to use this in your purposes and see all the maximums and minimums, there is a Swagger-Documentaion: 
+
+https://nodejs-hw-mongodb-7wu3.onrender.com/api-docs/
+
+To use it in YOUR service, website or what else, i would recommend you to make a separate file, like "api.js" or something like that(it must to be a .js-file), where you store a link to the service. I would also recommend you to use [Axios](https://axios-http.com/) and in the it should look something like that:
+
+</b>
+
+```js
+//random-ass-folder/api.js
+
+import axios from "axios";
+
+export const instance = axios.create({
+    baseURL: "https://nodejs-hw-mongodb-7wu3.onrender.com/",
+});
+
+```
+
+<b>
+Then you can use it in your functions, with routes that stand in the documentation:
+</b>
+
+```js
+//somewhere/auth/operations.js
+
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { instance } from "../service/api";
+
+// *other code*
+
+export const apiRegister = createAsyncThunk(
+"auth/register",
+async (formData, thunkAPI) => {
+    try {
+        const { data } = await instance.post("/auth/register", formData);
+        setToken(data.token);
+        return data;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+    }
+}
+);
+
+export const apiLogin = createAsyncThunk(
+"auth/login",
+async (formData, thunkAPI) => {
+    try {
+        const { data } = await instance.post("/auth/login", formData);
+        console.log("Login data:", data);
+        setToken(data.token);
+        return data;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+    }
+}
+);
+
+export const apiRefreshUser = createAsyncThunk(
+"auth/refresh",
+async (_, thunkAPI) => {
+    try {
+        const state = thunkAPI.getState();
+        const token = state.auth.token;
+        setToken(token);
+        const { data } = await instance.get("/auth/refresh");
+        console.log("Refresh data:", data);
+        return data;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+    }
+}
+);
+
+export const apiLogout = createAsyncThunk(
+"auth/logout",
+async (_, thunkAPI) => {
+    try {
+        await instance.post("/auth/logout");
+        clearToken();
+        return;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+    }
+}
+);
+
+```
+
+#
+
+<b>This is a final version of the service!</b> 
+
+The server is being rendered on the branch "hw7-swagger".
