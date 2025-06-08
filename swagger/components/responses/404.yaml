@@ -16,3 +16,4 @@ content:
           example: Contact not found
         data:
           type: object
+          example: {}

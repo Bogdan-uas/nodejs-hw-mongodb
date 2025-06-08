@@ -2,7 +2,7 @@ tags:
   - Contacts
 summary: Create contact
 operationId: createContact
-description: Create contact
+description: 'Create a contact with payload'
 security:
   - bearerAuth: []
 requestBody:
@@ -15,25 +15,29 @@ requestBody:
           - phoneNumber
         properties:
           name:
+            description: "Contact's name"
             type: string
             example: Vadya
-          phoneNumber:
+          email:
+            description: "Contact's email"
             type: string
-            example: 658654657374
+            example: vadyamalchuk1212@gmail.com
+          phoneNumber:
+            description: "Contact's phoneNumber"
+            type: string
+            example: '+380000000007'
           isFavourite:
+            description: 'Whether is contact is favourite'
             type: boolean
             example: false
           contactType:
+            description: "Contact's type"
             type: string
-            enum:
-              - work
-              - home
-              - personal
-          userId:
-            type: string
-            example: 6687bd0b07d349529f997ba9
+            enum: ['work', 'home', 'personal']
           photo:
+            description: "Link to contact's photo"
             type: string
+            format: binary
             example: https://res.cloudinary.com/dzx2rxopv/image/upload/v1720624474/gi9t0hmriyhjvyxdoqwk.jpg
 responses:
   '201':
