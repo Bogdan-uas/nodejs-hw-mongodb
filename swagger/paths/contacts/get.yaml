@@ -34,6 +34,12 @@ parameters:
       type: string
       enum: ['work', 'home', 'personal']
       example: home
+  - in: query
+    name: isFavourite
+    schema:
+      type: boolean
+      enum: [true, false]
+      example: true
 responses:
   '200':
     description: 'Successfully found contacts!'

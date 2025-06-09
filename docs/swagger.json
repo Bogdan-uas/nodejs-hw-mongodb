@@ -11,10 +11,10 @@
   },
   "servers": [
     {
-      "url": "<http://localhost:3000>"
+      "url": "http://localhost:3000"
     },
     {
-      "url": "<https://nodejs-hw-mongodb-7wu3.onrender.com/>"
+      "url": "https://nodejs-hw-mongodb-7wu3.onrender.com"
     }
   ],
   "tags": [
@@ -118,10 +118,6 @@
             "multipart/form-data": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "name",
-                  "phoneNumber"
-                ],
                 "properties": {
                   "name": {
                     "description": "Contact's name",
@@ -298,6 +294,18 @@
                 "personal"
               ],
               "example": "home"
+            }
+          },
+          {
+            "in": "query",
+            "name": "isFavourite",
+            "schema": {
+              "type": "boolean",
+              "enum": [
+                true,
+                false
+              ],
+              "example": true
             }
           }
         ],
