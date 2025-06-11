@@ -347,7 +347,7 @@ But if talking seriously, all this is just for you to try out the functionality 
 
 https://nodejs-hw-mongodb-7wu3.onrender.com/api-docs/
 
-To use it in YOUR service, website or what else, i would recommend you to make a separate file, like "api.js" or something like that(it must to be a .js-file), where you store a link to the service. I would also recommend you to use [Axios](https://axios-http.com/) and in the it should look something like that:
+To use it in YOUR service, website or what else, i would recommend you to make a separate file, like "api.js" or something like that(it must to be a .js-file), where you store a link to the service. I would also recommend you to use [Axios](https://axios-http.com/) and it should look something like that:
 
 </b>
 
@@ -365,6 +365,7 @@ export const instance = axios.create({
 <b>
 Then you can use it in your functions, with routes that stand in the documentation:
 </b>
+
 
 ```js
 //somewhere/auth/operations.js
