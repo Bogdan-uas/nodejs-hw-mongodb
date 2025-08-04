@@ -1,0 +1,22 @@
+type: object
+properties:
+  name:
+    description: "User's name"
+    type: string
+    example: 'Ben Dover'
+  id:
+    description: "User's id"
+    type: string
+    example: '5f5c7a8b9d3b2c001c8d4c8b'
+  email:
+    description: "User's email"
+    type: string
+    example: 'ben.dover69@example.com'
+  createdAt:
+    type: string
+    format: date-time
+    example: '2021-01-01T00:00:00Z'
+  updatedAt:
+    type: string
+    format: date-time
+    example: '2021-01-01T00:00:00Z'
